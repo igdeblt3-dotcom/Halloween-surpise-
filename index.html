@@ -1,0 +1,71 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halloween Surprise 🎃</title>
+<style>
+body {
+  background: #82727b;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #ff83a7;
+  padding-top: 30vh;
+}
+.box {
+  background: #fff5fa;
+  padding: 35px 15px;
+  border-radius: 25px;
+  margin: 15px;
+}
+h1 { font-size: 26px; }
+button {
+  background: #ffafc2;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 25px;
+  margin: 8px;
+  font-size: 18px;
+  color: white;
+}
+#ghost {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #100d19;
+  color: white;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.face { font-size: 110px; }
+#ghost h1 { font-size: 32px; }
+</style>
+</head>
+<body>
+<div class="box" id="invite">
+<h1>🎃 Benimle Halloween kutlar mısın?</h1>
+<button onclick="surprise()">EVET 🎃</button>
+<button onclick="surprise()">HAYIR 🕸️</button>
+</div>
+
+<div id="ghost">
+<div class="face">👻</div>
+<h1>YAKALADIM SENİ!!!</h1>
+<p>BU BİR HALLOWEEN SÜRPRİZİ! 😂</p>
+<button onclick="closeGhost()">Tekrar dene 💗</button>
+</div>
+
+<script>
+function surprise() {
+ document.getElementById("ghost").style.display="flex";
+}
+function closeGhost() {
+ document.getElementById("ghost").style.display="none";
+}
+</script>
+</body>
+</html>
